@@ -2,8 +2,6 @@
 [![Email](https://img.shields.io/badge/Email-Me-red?style=for-the-badge)](mailto:go.mendez@outlook.com)
 [![GitHub](https://img.shields.io/github/followers/tuusuario?label=Follow&style=for-the-badge)](https://github.com/l-gonzo)
 
-> 🚀 **Computer Systems Engineer**
-
 ---
 
 ## 🌐 **Languages, Tools and Platforms**
