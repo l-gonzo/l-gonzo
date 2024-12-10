@@ -1,6 +1,3 @@
-
-# 👋 **Hi, I'm Gonzalo** 🚀
-
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/thegonzo/)
 [![Email](https://img.shields.io/badge/Email-Me-red?style=for-the-badge)](mailto:go.mendez@outlook.com)
 [![GitHub](https://img.shields.io/github/followers/tuusuario?label=Follow&style=for-the-badge)](https://github.com/l-gonzo)
