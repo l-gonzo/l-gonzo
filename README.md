@@ -53,7 +53,7 @@
 <img src="assets/cell-4-contact.svg" width="100%" alt="In [4]: Gonzalo.contact()"/>
 
 <p align="center">
-  <a href="https://www.linkedin.com/in/thegonzo/"><img src="assets/badges/linkedin.svg" height="30" alt="LinkedIn"/></a>
+  <a href="https://www.linkedin.com/in/l-gonzalo/"><img src="assets/badges/linkedin.svg" height="30" alt="LinkedIn"/></a>
   <a href="mailto:go.mendez@outlook.com"><img src="assets/badges/email.svg" height="30" alt="Email"/></a>
   <a href="https://github.com/l-gonzo"><img src="assets/badges/github.svg" height="30" alt="GitHub"/></a>
 </p>
