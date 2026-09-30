@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 410" width="900" height="410" role="img" aria-label="Profile summary as a Jupyter notebook cell">
+<title>Luis Gonzalo Méndez — profile summary</title>
+<style>
+  .ln  { opacity:0; animation: ln .5s ease-out forwards; }
+  .fade{ opacity:0; animation: fade .6s ease-out forwards; }
+  .bar { transform-box: fill-box; transform-origin: left; transform: scaleX(0); animation: bar 1.6s cubic-bezier(.4,0,.2,1) forwards; }
+  .cur { animation: blink 1s steps(1) infinite; }
+  @keyframes ln   { from { opacity:0; transform: translateX(-8px); } to { opacity:1; transform:none; } }
+  @keyframes fade { to { opacity:1; } }
+  @keyframes bar  { to { transform: scaleX(1); } }
+  @keyframes blink{ 50% { opacity:0; } }
+  @media (prefers-reduced-motion: reduce) { .ln,.fade { animation:none; opacity:1; } .bar { animation:none; transform:none; } }
+</style>
+<rect x=".5" y=".5" width="899" height="409" rx="12" fill="#1a1b26" stroke="#2f334d"/>
+<path d="M.5 44H899.5" stroke="#2f334d"/>
+<circle cx="24" cy="22" r="6" fill="#f7768e"/><circle cx="44" cy="22" r="6" fill="#ff9e64" fill-opacity=".85"/><circle cx="64" cy="22" r="6" fill="#9ece6a"/>
+<text x="450.0" y="27" text-anchor="middle" fill="#8b93b8" font-family="'JetBrains Mono','SFMono-Regular',Consolas,'DejaVu Sans Mono',monospace" font-size="13">profile.ipynb — Python 3</text>
+<g font-family="'JetBrains Mono','SFMono-Regular',Consolas,'DejaVu Sans Mono',monospace" font-size="14">
+
+<rect x="96" y="60" width="780" height="60" rx="6" fill="#1f2335" stroke="#2f334d"/>
+<text x="86" y="80" text-anchor="end" fill="#7aa2f7">In [1]:</text>
+<clipPath id="c0"><rect x="110" y="62" height="26" width="0"><animate attributeName="width" begin="0.40s" dur="1.21s" values="0.0;8.4;16.8;25.2;33.6;42.0;50.4;58.8;67.2;75.6;84.0;92.4;100.8;109.2;117.6;126.0;134.4;142.8;151.2;159.6;168.0;176.4;184.8;193.2;201.6;210.0;218.4;226.8" calcMode="discrete" fill="freeze"/></rect></clipPath>
+<text x="110" y="80" clip-path="url(#c0)" xml:space="preserve"><tspan fill="#bb9af7">from</tspan><tspan fill="#c0caf5"> researcher </tspan><tspan fill="#bb9af7">import</tspan><tspan fill="#c0caf5"> Luis</tspan></text>
+<clipPath id="c1"><rect x="110" y="86" height="26" width="0"><animate attributeName="width" begin="1.86s" dur="0.63s" values="0.0;8.4;16.8;25.2;33.6;42.0;50.4;58.8;67.2;75.6;84.0;92.4;100.8;109.2;117.6" calcMode="discrete" fill="freeze"/></rect></clipPath>
+<text x="110" y="104" clip-path="url(#c1)" xml:space="preserve"><tspan fill="#c0caf5">Luis</tspan><tspan fill="#7dcfff">.</tspan><tspan fill="#7aa2f7">summary</tspan><tspan fill="#c0caf5">()</tspan></text>
+<text class="fade" style="animation-delay:2.94s" x="86" y="162" text-anchor="end" fill="#f7768e">Out[1]:</text>
+<text class="fade" style="animation-delay:2.94s" x="110" y="162" fill="#8b93b8">loading profile</text>
+<rect class="fade" style="animation-delay:2.94s" x="252.8" y="150" width="300" height="12" rx="3" fill="#1f2335" stroke="#2f334d"/>
+<rect class="bar" style="animation-delay:3.04s" x="252.8" y="150" width="300" height="12" rx="3" fill="#73daca" fill-opacity=".85"/>
+<text class="fade" style="animation-delay:4.75s" x="564.8" y="162" fill="#9ece6a">100% ✓</text>
+<text class="ln" style="animation-delay:5.04s" x="110" y="196" xml:space="preserve"><tspan fill="#7dcfff">role        </tspan><tspan fill="#8b93b8">: </tspan><tspan fill="#c0caf5">M.Sc. student, Computer Science @ TecNM León</tspan></text>
+<text class="ln" style="animation-delay:5.26s" x="110" y="220" xml:space="preserve"><tspan fill="#7dcfff">research    </tspan><tspan fill="#8b93b8">: </tspan><tspan fill="#c0caf5">pattern recognition · deep learning · associative memories</tspan></text>
+<text class="ln" style="animation-delay:5.49s" x="110" y="244" xml:space="preserve"><tspan fill="#7dcfff">current     </tspan><tspan fill="#8b93b8">: </tspan><tspan fill="#c0caf5">hybrid CNN + associative-memory classifiers (few-shot)</tspan></text>
+<text class="ln" style="animation-delay:5.71s" x="110" y="268" xml:space="preserve"><tspan fill="#7dcfff">benchmarks  </tspan><tspan fill="#8b93b8">: </tspan><tspan fill="#c0caf5">cost-sensitive k-NN variants on imbalanced data</tspan></text>
+<text class="ln" style="animation-delay:5.92s" x="110" y="292" xml:space="preserve"><tspan fill="#7dcfff">industry    </tspan><tspan fill="#8b93b8">: </tspan><tspan fill="#c0caf5">Software Developer @ Scripps Research (2023–2025)</tspan></text>
+<text class="ln" style="animation-delay:6.14s" x="110" y="316" xml:space="preserve"><tspan fill="#7dcfff">            </tspan><tspan fill="#8b93b8">  </tspan><tspan fill="#c0caf5">Software Developer @ Teracrom (2025–2026)</tspan></text>
+<text class="ln" style="animation-delay:6.37s" x="110" y="340" xml:space="preserve"><tspan fill="#7dcfff">degree      </tspan><tspan fill="#8b93b8">: </tspan><tspan fill="#c0caf5">B.Eng. Computer Systems — ITESI (2024)</tspan></text>
+<text class="ln" style="animation-delay:6.58s" x="110" y="364" xml:space="preserve"><tspan fill="#7dcfff">open_to     </tspan><tspan fill="#8b93b8">: </tspan><tspan fill="#c0caf5">research collaborations · PhD · ML engineering</tspan></text>
+<g class="fade" style="animation-delay:6.80s"><rect class="cur" x="620.0" y="350" width="9" height="17" fill="#73daca"/></g>
+</g>
+</svg>

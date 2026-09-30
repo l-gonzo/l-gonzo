@@ -1,37 +1,61 @@
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/thegonzo/)
-[![Email](https://img.shields.io/badge/Email-Me-red?style=for-the-badge)](mailto:go.mendez@outlook.com)
-[![GitHub](https://img.shields.io/github/followers/l-gonzo?label=Follow&style=for-the-badge)](https://github.com/l-gonzo)
-
----
-
-## 🌐 **Languages, Tools and Platforms**
-
 <div align="center">
-  <img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white" alt="Python"/>
-  <img src="https://img.shields.io/badge/Jupyter%20Notebook-F37626?style=for-the-badge&logo=jupyter&logoColor=white" alt="Jupyter Notebook"/>
-  <img src="https://img.shields.io/badge/TensorFlow-FF6F00?style=for-the-badge&logo=tensorflow&logoColor=white" alt="TensorFlow"/>
-  <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black" alt="JavaScript"/>
-  <img src="https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white" alt="TypeScript"/>
-  <img src="https://img.shields.io/badge/React-61DAFB?style=for-the-badge&logo=react&logoColor=black" alt="React"/>
-  <img src="https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=node.js&logoColor=white" alt="Node.js"/>
-  <img src="https://img.shields.io/badge/C%23-239120?style=for-the-badge&logo=c-sharp&logoColor=white" alt="C#"/>
-  <img src="https://img.shields.io/badge/Dart-0175C2?style=for-the-badge&logo=dart&logoColor=white" alt="Dart"/>
-  <img src="https://img.shields.io/badge/Flutter-02569B?style=for-the-badge&logo=flutter&logoColor=white" alt="Flutter"/>  
-  <img src="https://img.shields.io/badge/Linux-FCC624?style=for-the-badge&logo=linux&logoColor=black" alt="Linux"/>
-  <img src="https://img.shields.io/badge/Windows-0078D6?style=for-the-badge&logo=windows&logoColor=white" alt="Windows"/>
-  <img src="https://img.shields.io/badge/MongoDB-47A248?style=for-the-badge&logo=mongodb&logoColor=white" alt="MongoDB"/>
-  <img src="https://img.shields.io/badge/MySQL-4479A1?style=for-the-badge&logo=mysql&logoColor=white" alt="MySQL"/>
-  <img src="https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white" alt="Git"/>
-  <img src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white" alt="GitHub"/>
+
+<img src="assets/header.svg" width="100%" alt="Luis Gonzalo Méndez — Pattern Recognition · Machine Learning"/>
+
+<br/>
+
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-thegonzo-7aa2f7?style=flat-square&logo=linkedin&logoColor=white&labelColor=1a1b26)](https://www.linkedin.com/in/thegonzo/)
+[![Email](https://img.shields.io/badge/Email-go.mendez%40outlook.com-73daca?style=flat-square&labelColor=1a1b26)](mailto:go.mendez@outlook.com)
+[![GitHub followers](https://img.shields.io/github/followers/l-gonzo?label=Followers&style=flat-square&logo=github&color=bb9af7&labelColor=1a1b26)](https://github.com/l-gonzo)
+
 </div>
 
----
+### About
 
+I'm an M.Sc. student in Computer Science at **TecNM – Instituto Tecnológico de León**, working on **pattern recognition and machine learning**. My current research explores **hybrid classifiers** that combine pretrained CNNs as feature extractors with **associative memories**, aimed at image classification when only a few samples per class are available.
 
-## 📈 **Github statistics**
+Before graduate school I spent three years building production software, including two and a half years at **Scripps Research**. I care about experiments that are reproducible, well measured and honestly reported.
 
 <div align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=l-gonzo&show_icons=true&theme=radical&count_private=true&include_all_commits=true" width="48%" alt="GitHub Stats"/>
-  <img src="https://github-readme-streak-stats.herokuapp.com/?user=l-gonzo&theme=radical" width="48%" alt="GitHub Streak"/>
+  <img src="assets/profile-cell.svg" width="100%" alt="Profile summary rendered as a Jupyter notebook cell"/>
 </div>
 
+### Current work
+
+| Project | Question | Methods |
+|---|---|---|
+| **Hybrid CNN + associative memory classifier** <br/><sub>M.Sc. research · Pattern Recognition</sub> | Can an associative memory replace the dense head of a pretrained CNN when training data per class is scarce? | Transfer learning, feature extraction, CAP associative memory |
+| **Cost-sensitive k-NN benchmark** <br/><sub>Pattern Recognition · TecNM León</sub> | Do cost-sensitive and reconstruction-based k-NN variants beat classic k-NN on the Sonar dataset? | k-NN, Direct-CS-KNN, Distances-CS-KNN, CM-KNN, One-Step KNN, statistical testing |
+
+### Toolkit
+
+<table>
+  <tr>
+    <td><b>Machine learning</b></td>
+    <td><img src="https://skillicons.dev/icons?i=py,tensorflow&theme=dark" height="40" alt="Python, TensorFlow"/></td>
+    <td><sub>Python · TensorFlow · Jupyter</sub></td>
+  </tr>
+  <tr>
+    <td><b>Software</b></td>
+    <td><img src="https://skillicons.dev/icons?i=ts,js,react,nodejs,cs,dart,flutter&theme=dark" height="40" alt="TypeScript, JavaScript, React, Node.js, C#, Dart, Flutter"/></td>
+    <td><sub>TypeScript · JavaScript · React · Node.js · C# · Dart · Flutter</sub></td>
+  </tr>
+  <tr>
+    <td><b>Data &amp; tooling</b></td>
+    <td><img src="https://skillicons.dev/icons?i=mongodb,mysql,git,github,linux,windows&theme=dark" height="40" alt="MongoDB, MySQL, Git, GitHub, Linux, Windows"/></td>
+    <td><sub>MongoDB · MySQL · Git · GitHub · Linux · Windows</sub></td>
+  </tr>
+</table>
+
+### Activity
+
+<div align="center">
+  <img src="https://github-readme-stats.vercel.app/api?username=l-gonzo&show_icons=true&theme=tokyonight&hide_border=true&count_private=true&include_all_commits=true&border_radius=10" height="165" alt="GitHub stats"/>
+  <img src="https://streak-stats.demolab.com/?user=l-gonzo&theme=tokyonight&hide_border=true&border_radius=10" height="165" alt="GitHub streak"/>
+</div>
+
+<br/>
+
+<div align="center">
+  <sub>Open to research collaborations, PhD opportunities and ML engineering roles.</sub>
+</div>
