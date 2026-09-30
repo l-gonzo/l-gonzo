@@ -1,5 +1,5 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 256" width="1000" height="256" role="img" aria-label="Notebook cell 1">
-<title>Luis Gonzalo Méndez — In [1]</title>
+<title>Gonzalo Méndez — In [1]</title>
 <defs><clipPath id="c1_0"><rect x="126" y="65" height="26" width="0"><animate attributeName="width" begin="0.50s" dur="1.35s" values="0.0;9.6;19.2;28.8;38.4;48.0;57.6;67.2;76.8;86.4;96.0;105.6;115.2;124.8;134.4;144.0;153.6;163.2;172.8;182.4;192.0;201.6;211.2;220.8;230.4;240.0;249.6;259.2" calcMode="discrete" fill="freeze"/></rect></clipPath><clipPath id="c1_1"><rect x="126" y="91" height="26" width="0"><animate attributeName="width" begin="2.00s" dur="0.85s" values="0.0;9.6;19.2;28.8;38.4;48.0;57.6;67.2;76.8;86.4;96.0;105.6;115.2;124.8;134.4;144.0;153.6;163.2" calcMode="discrete" fill="freeze"/></rect></clipPath></defs>
 <style>
   .fade { opacity:0; animation: fade .45s ease-out forwards; }

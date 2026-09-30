@@ -9,7 +9,9 @@ Edita solo el bloque CONTENIDO EDITABLE; lo demás es el motor de dibujo.
 import math
 import os
 import random
+import json
 import re
+import urllib.request
 
 OUT = "assets"
 
@@ -17,40 +19,46 @@ OUT = "assets"
 #  CONTENIDO EDITABLE
 # =====================================================================
 
-NAME = "Luis Gonzalo Méndez"
+NAME = "Gonzalo Méndez"
 GITHUB_USER = "l-gonzo"
 
 # Puestos que se escriben/borran en el header (en ciclo)
 ROLES = ["AI / ML Engineer", "Web Developer"]
 
-# In [1]  Luis.summary()   -> (clave, valor); clave "" = continúa la línea anterior
+# In [1]  Gonzalo.summary()   -> (clave, valor); clave "" = continúa la línea anterior
 SUMMARY = [
     ("role", "AI / Machine Learning Engineer · Web Developer"),
     ("degree", "B.Eng. Computer Systems"),
     ("", "M.Sc. Computer Science (in progress)"),
 ]
 
-# In [2]  Luis.focus_areas()  -> tarjetas animadas.
-# El segundo valor elige la animación: "ml", "dl", "cv", "opt"
+# In [2]  Gonzalo.focus_areas()  -> tarjetas animadas.
+# El segundo valor elige la animación: "ml", "dl", "cv", "opt", "web"
 FOCUS = [
     ("Machine Learning", "ml"),
     ("Deep Learning", "dl"),
     ("Computer Vision", "cv"),
     ("Optimization & Heuristics", "opt"),
+    ("Web Development", "web"),
+    #("Probability & Statistics", "stats"),
 ]
 
-# In [3]  Luis.stack()  -> tabla de íconos en el README.
+# In [3]  Gonzalo.stack()  -> tabla de íconos en el README.
 # (grupo, ids de https://skillicons.dev, texto que se muestra)
+# Los íconos se descargan una sola vez a assets/icons/ (ver "ICONOS LOCALES").
 STACK = [
-    ("Machine Learning", ["py", "tensorflow", "pytorch"], "Python · TensorFlow · PyTorch · Jupyter"),
-    ("Web", ["ts", "js", "react", "nodejs"], "TypeScript · JavaScript · React · Node.js"),
-    ("Apps", ["cs", "dart", "flutter"], "C# · Dart · Flutter"),
-    ("Data & Tools", ["mongodb", "mysql", "git", "github", "linux", "windows"],
-     "MongoDB · MySQL · Git · GitHub · Linux · Windows"),
+    ("Machine Learning", ["py", "tensorflow", "pytorch", "sklearn"], "Python · TensorFlow · PyTorch · scikit-learn ·Jupyter"),
+    ("Web", ["ts", "js", "react", "nodejs", "css", "html", "php"], "TypeScript · JavaScript · React · Node.js · CSS · HTML · PHP"),
+    ("Mobile", ["dart", "flutter"], "Dart · Flutter"),
+    ("Databases", ["mongodb", "mysql"], "MongoDB · MySQL"),
+    ("Version Control", ["git", "github"], "Git · GitHub"),
+    ("Cloud & Containers", ["aws", "docker"], "AWS · Docker"),
+    ("Operating Systems", ["linux", "windows"], "Linux · Windows")
 ]
 
-# In [4]  Luis.contact()  -> badges con enlace en el README.
-# (texto, color hex sin #, logo de https://simpleicons.org o "", enlace)
+# In [4]  Gonzalo.contact()  -> badges con enlace en el README.
+# (texto, color hex sin #, logo de https://simpleicons.org o "" = sobre de correo, enlace)
+# Los badges se generan como SVG locales en assets/badges/ (sin shields.io).
 CONTACT = [
     ("LinkedIn", "7aa2f7", "linkedin", "https://www.linkedin.com/in/thegonzo/"),
     ("Email", "73daca", "", "mailto:go.mendez@outlook.com"),
@@ -111,8 +119,8 @@ def header():
         v = [fn(i, k) for _, i, k in tl]
         return ";".join(v + [v[-1]])
 
-    s = [f'''<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 {W} {H}" width="{W}" height="{H}" role="img" aria-label="Luis Gonzalo Méndez — AI / Machine Learning Engineer · Web Developer">
-<title>Luis Gonzalo Méndez — AI / Machine Learning Engineer · Web Developer</title>
+    s = [f'''<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 {W} {H}" width="{W}" height="{H}" role="img" aria-label="Gonzalo Méndez — AI / Machine Learning Engineer · Web Developer">
+<title>Gonzalo Méndez — AI / Machine Learning Engineer · Web Developer</title>
 <defs>
   <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="{BG2}"/><stop offset="1" stop-color="{BG}"/></linearGradient>
   <linearGradient id="fadeR" x1="0" x2="1"><stop offset="0" stop-color="{BG}" stop-opacity="1"/><stop offset=".55" stop-color="{BG}" stop-opacity=".85"/><stop offset="1" stop-color="{BG}" stop-opacity="0"/></linearGradient>
@@ -395,7 +403,32 @@ def viz_opt(ox, oy, w, h, rng):
     return s
 
 
-VIZ = {"ml": viz_ml, "dl": viz_dl, "cv": viz_cv, "opt": viz_opt}
+def viz_web(ox, oy, w, h, rng):
+    """mini browser whose layout builds itself, block by block"""
+    s = []
+    s.append(f'<rect x="{ox:.1f}" y="{oy:.1f}" width="{w:.1f}" height="{h:.1f}" rx="5" fill="{PANEL}" stroke="{BORDER}"/>')
+    s.append(f'<path d="M{ox:.1f} {oy+13:.1f}H{ox+w:.1f}" stroke="{BORDER}"/>')
+    for i, col in enumerate([RED, YELLOW, GREEN]):
+        s.append(f'<circle cx="{ox + 7 + i*7:.1f}" cy="{oy+6.5:.1f}" r="2.2" fill="{col}"/>')
+    s.append(f'<rect x="{ox+30:.1f}" y="{oy+3.5:.1f}" width="{w-38:.1f}" height="6" rx="3" fill="{BG}"/>')
+    iy, ix, iw = oy + 19, ox + 6, w - 12
+    blocks = [  # (x, y, w, h, color, opacity)
+        (ix, iy, iw, 8, BLUE, .9),                                   # navbar
+        (ix, iy + 13, iw * 0.62, 22, PURPLE, .75),                   # hero
+        (ix + iw * 0.66, iy + 13, iw * 0.34, 22, TEAL, .6),          # hero image
+        (ix, iy + 40, iw * 0.31, 20, CYAN, .45),                     # cards
+        (ix + iw * 0.345, iy + 40, iw * 0.31, 20, CYAN, .45),
+        (ix + iw * 0.69, iy + 40, iw * 0.31, 20, CYAN, .45),
+        (ix, iy + 65, iw * 0.8, 4, MUTED, .5),                       # text lines
+        (ix, iy + 72, iw * 0.55, 4, MUTED, .5),
+    ]
+    for i, (x, y, bw, bh, col, op) in enumerate(blocks):
+        s.append(f'<rect class="bld" style="animation-delay:{1.0 + i*0.22:.2f}s" x="{x:.1f}" y="{y:.1f}" width="{bw:.1f}" height="{bh:.1f}" rx="2" fill="{col}" fill-opacity="{op}"/>')
+    s.append(f'<text class="tag" x="{ox + w - 6:.1f}" y="{oy + h - 5:.1f}" text-anchor="end" fill="{ORANGE}" font-size="11" font-weight="700">&lt;/&gt;</text>')
+    return s
+
+
+VIZ = {"ml": viz_ml, "dl": viz_dl, "cv": viz_cv, "opt": viz_opt, "web": viz_web}
 
 
 def cell_focus():
@@ -404,7 +437,8 @@ def cell_focus():
     c.out_label()
     rng = random.Random(11)
     n = len(FOCUS)
-    gap = 16
+    gap = 16 if n <= 4 else 12
+    TITLE_FS = 15 if n <= 4 else 13
     x0 = GX - 14
     total_w = CW_W - x0 - 24
     card_w = (total_w - gap * (n - 1)) / n
@@ -421,14 +455,17 @@ def cell_focus():
         c.body.extend(VIZ[kind](x + 20, top + 20, card_w - 40, 96, rng))
         c.body.append('</g>')
         c.body.append(f'<text x="{x+14:.1f}" y="{top+146}" fill="{MUTED}" font-size="12">{i+1:02d}</text>')
-        # wrap long titles onto two lines
-        lines = [title]
-        if len(title) > 18 and " " in title:
-            words = title.split(" ")
-            best = min(range(1, len(words)), key=lambda k: abs(len(" ".join(words[:k])) - len(" ".join(words[k:]))))
-            lines = [" ".join(words[:best]), " ".join(words[best:])]
+        # wrap the title to the card width
+        max_chars = int((card_w - 26) / (TITLE_FS * 0.62))
+        lines, cur = [], ""
+        for word in title.split(" "):
+            if cur and len(cur) + 1 + len(word) > max_chars:
+                lines.append(cur); cur = word
+            else:
+                cur = f"{cur} {word}".strip()
+        lines.append(cur)
         for li, ln in enumerate(lines):
-            c.body.append(f'<text x="{x+14:.1f}" y="{top+168 + li*19}" fill="{TEXT}" font-size="15" font-weight="700">{esc(ln)}</text>')
+            c.body.append(f'<text x="{x+14:.1f}" y="{top+168 + li*19}" fill="{TEXT}" font-size="{TITLE_FS}" font-weight="700">{esc(ln)}</text>')
         c.body.append('</g>')
     c.css = f"""
   .pop {{ opacity:0; transform-box: fill-box; transform-origin:center; animation: pop .4s cubic-bezier(.3,1.6,.5,1) forwards; }}
@@ -446,6 +483,10 @@ def cell_focus():
   @keyframes det {{ 0% {{ opacity:1; }} 45% {{ opacity:0; }} 100% {{ opacity:0; }} }}
   .trail {{ stroke-dasharray:1; stroke-dashoffset:1; animation: trail 5s linear 1.2s infinite; }}
   @keyframes trail {{ 0% {{ stroke-dashoffset:1; opacity:1; }} 60% {{ stroke-dashoffset:0; opacity:1; }} 90% {{ opacity:1; }} 100% {{ stroke-dashoffset:0; opacity:0; }} }}
+  .bld {{ opacity:0; transform-box: fill-box; transform-origin: left center; animation: bld 7s ease-out infinite; }}
+  @keyframes bld {{ 0% {{ opacity:0; transform: scaleX(0); }} 8% {{ opacity:1; transform: scaleX(1); }} 80% {{ opacity:1; transform: scaleX(1); }} 90%,100% {{ opacity:0; transform: scaleX(1); }} }}
+  .tag {{ animation: tag 1.6s ease-in-out infinite; }}
+  @keyframes tag {{ 0%,100% {{ opacity:.35; }} 50% {{ opacity:1; }} }}
   .minpulse {{ transform-box: fill-box; transform-origin:center; animation: minpulse 2s ease-out infinite; }}
   @keyframes minpulse {{ from {{ transform: scale(.6); opacity:1; }} to {{ transform: scale(2.6); opacity:0; }} }}
 """
@@ -494,20 +535,128 @@ def footer():
         fh.write(svg)
 
 
+# ---------------------------------------------------------------- ICONOS LOCALES
+# Los íconos se descargan UNA sola vez (necesita internet solo esa vez) y se
+# guardan en assets/icons/. Si el archivo ya existe, no se vuelve a descargar,
+# así que después todo funciona sin internet. Para forzar una nueva descarga,
+# borra el archivo correspondiente de assets/icons/.
+ICON_DIR = f"{OUT}/icons"
+BADGE_DIR = f"{OUT}/badges"
+SKILL_RAW = "https://raw.githubusercontent.com/tandpfun/skill-icons/main"
+SIMPLE_RAW = "https://raw.githubusercontent.com/simple-icons/simple-icons/develop/icons"
+_skill_index = None
+
+
+def _get(url):
+    req = urllib.request.Request(url, headers={"User-Agent": "profile-readme-gen"})
+    with urllib.request.urlopen(req, timeout=20) as r:
+        return r.read().decode("utf-8")
+
+
+def _skill_files():
+    """id -> file name, read from the skill-icons README table (cached in assets/icons)."""
+    global _skill_index
+    if _skill_index is not None:
+        return _skill_index
+    cache = f"{ICON_DIR}/_skill-index.json"
+    if os.path.exists(cache):
+        with open(cache, encoding="utf-8") as fh:
+            _skill_index = json.load(fh)
+        return _skill_index
+    md = _get(f"{SKILL_RAW}/readme.md")
+    _skill_index = dict(re.findall(r"\|\s*`([^`]+)`\s*\|.*?/icons/([^)\s#]+\.svg)", md))
+    with open(cache, "w", encoding="utf-8") as fh:
+        json.dump(_skill_index, fh, indent=1, sort_keys=True)
+    return _skill_index
+
+
+def skill_icon(icon_id):
+    """Returns local path of a skill icon, downloading it the first time."""
+    path = f"{ICON_DIR}/{icon_id}.svg"
+    if os.path.exists(path):
+        return path
+    try:
+        fname = _skill_files().get(icon_id)
+        if not fname:
+            print(f"  ! '{icon_id}' no existe en skillicons.dev; se omite")
+            return None
+        with open(path, "w", encoding="utf-8") as fh:
+            fh.write(_get(f"{SKILL_RAW}/icons/{fname}"))
+        print(f"  ↓ {path}")
+        return path
+    except Exception as e:  # sin internet, etc.
+        print(f"  ! no se pudo descargar '{icon_id}': {e}")
+        return None
+
+
+def simple_icon_path(slug):
+    """Returns the SVG path data (24x24) of a simpleicons.org logo, cached locally."""
+    path = f"{ICON_DIR}/si-{slug}.svg"
+    if not os.path.exists(path):
+        try:
+            with open(path, "w", encoding="utf-8") as fh:
+                fh.write(_get(f"{SIMPLE_RAW}/{slug}.svg"))
+            print(f"  ↓ {path}")
+        except Exception as e:
+            print(f"  ! no se pudo descargar el logo '{slug}': {e}")
+            if os.path.exists(path):
+                os.remove(path)
+            return None
+    with open(path, encoding="utf-8") as fh:
+        m = re.search(r'<path[^>]*\sd="([^"]+)"', fh.read())
+    return m.group(1) if m else None
+
+
+SANS = "-apple-system,'Segoe UI',Helvetica,Arial,sans-serif"
+# logos that simpleicons.org no longer ships -> drawn as a monogram
+MONOGRAM = {"linkedin": "in"}
+ENVELOPE = "M2 5.5A1.5 1.5 0 0 1 3.5 4h17A1.5 1.5 0 0 1 22 5.5v13a1.5 1.5 0 0 1-1.5 1.5h-17A1.5 1.5 0 0 1 2 18.5zm2.2.5L12 11.6 19.8 6zM4 8.2V18h16V8.2l-8 5.7z"
+
+
+def badge(text, color, logo):
+    """Draws a local badge SVG (same look as shields 'for-the-badge')."""
+    label = text.upper()
+    fs, cw = 12, 12 * 0.62
+    d = ENVELOPE if not logo else (None if logo in MONOGRAM else simple_icon_path(logo))
+    lw = 38
+    W, H = int(lw + len(label) * (cw + 1.2) + 16), 30
+    if d:
+        icon = f'<g transform="translate(13 7) scale(.667)"><path d="{d}" fill="#{color}"/></g>'
+    else:  # logo not available -> small monogram box (e.g. "in" for LinkedIn)
+        mono = MONOGRAM.get(logo, (logo or text)[:1].upper())
+        icon = (f'<rect x="13" y="7" width="16" height="16" rx="3" fill="#{color}"/>'
+                f'<text x="21" y="19.5" text-anchor="middle" fill="{BG}" font-family="{SANS}" font-size="11" font-weight="700">{esc(mono)}</text>')
+    svg = f'''<svg xmlns="http://www.w3.org/2000/svg" width="{W}" height="{H}" viewBox="0 0 {W} {H}" role="img" aria-label="{esc(text)}">
+<title>{esc(text)}</title>
+<rect x=".5" y=".5" width="{W-1}" height="{H-1}" rx="6" fill="{BG}" stroke="#{color}" stroke-opacity=".7"/>
+{icon}
+<text x="{lw}" y="19.5" fill="#{color}" font-family="{MONO}" font-size="{fs}" font-weight="700" letter-spacing="1.2">{esc(label)}</text>
+</svg>
+'''
+    path = f"{BADGE_DIR}/{re.sub(r'[^a-z0-9]+', '-', text.lower()).strip('-')}.svg"
+    with open(path, "w", encoding="utf-8") as fh:
+        fh.write(svg)
+    return path
+
+
 # ---------------------------------------------------------------- README
 def readme():
     img = lambda f, alt: f'<img src="assets/{f}" width="100%" alt="{esc(alt)}"/>'
     rows = []
     for group, icons, label in STACK:
+        imgs = []
+        for icon_id in icons:
+            p = skill_icon(icon_id)
+            if p:
+                imgs.append(f'<img src="{p}" height="40" alt="{esc(icon_id)}"/>')
         rows.append(f'''  <tr>
     <td><b>{esc(group)}</b></td>
-    <td><img src="https://skillicons.dev/icons?i={",".join(icons)}&theme=dark" height="40" alt="{esc(label)}"/></td>
+    <td>{"&nbsp;".join(imgs)}</td>
     <td><sub>{esc(label)}</sub></td>
   </tr>''')
     badges = []
     for text, color, logo, link in CONTACT:
-        lg = f"&logo={logo}&logoColor=white" if logo else ""
-        badges.append(f'  <a href="{link}"><img src="https://img.shields.io/badge/{text.replace(" ", "_")}-{color}?style=for-the-badge{lg}&labelColor=1a1b26" alt="{esc(text)}"/></a>')
+        badges.append(f'  <a href="{link}"><img src="{badge(text, color, logo)}" height="30" alt="{esc(text)}"/></a>')
     summary_alt = "; ".join(f"{k}: {v}" if k else v for k, v in SUMMARY)
     md = f'''<div align="center">
   {img("header.svg", f"{NAME} — " + " · ".join(ROLES))}
@@ -515,11 +664,11 @@ def readme():
 
 <br/>
 
-{img("cell-1-summary.svg", "In [1]: Luis.summary() — " + summary_alt)}
+{img("cell-1-summary.svg", "In [1]: Gonzalo.summary() — " + summary_alt)}
 
-{img("cell-2-focus.svg", "In [2]: Luis.focus_areas() — " + ", ".join(t for t, _ in FOCUS))}
+{img("cell-2-focus.svg", "In [2]: Gonzalo.focus_areas() — " + ", ".join(t for t, _ in FOCUS))}
 
-{img("cell-3-stack.svg", "In [3]: Luis.stack()")}
+{img("cell-3-stack.svg", "In [3]: Gonzalo.stack()")}
 
 <div align="center">
 <table>
@@ -527,7 +676,7 @@ def readme():
 </table>
 </div>
 
-{img("cell-4-contact.svg", "In [4]: Luis.contact()")}
+{img("cell-4-contact.svg", "In [4]: Gonzalo.contact()")}
 
 <p align="center">
 {chr(10).join(badges)}
@@ -540,7 +689,8 @@ def readme():
 
 
 if __name__ == "__main__":
-    os.makedirs(OUT, exist_ok=True)
+    for d in (OUT, ICON_DIR, BADGE_DIR):
+        os.makedirs(d, exist_ok=True)
     header()
     cell_summary()
     cell_focus()

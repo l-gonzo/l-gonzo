@@ -1,5 +1,5 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 250" width="1200" height="250" role="img" aria-label="Luis Gonzalo Méndez — AI / Machine Learning Engineer · Web Developer">
-<title>Luis Gonzalo Méndez — AI / Machine Learning Engineer · Web Developer</title>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 250" width="1200" height="250" role="img" aria-label="Gonzalo Méndez — AI / Machine Learning Engineer · Web Developer">
+<title>Gonzalo Méndez — AI / Machine Learning Engineer · Web Developer</title>
 <defs>
   <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#16161e"/><stop offset="1" stop-color="#1a1b26"/></linearGradient>
   <linearGradient id="fadeR" x1="0" x2="1"><stop offset="0" stop-color="#1a1b26" stop-opacity="1"/><stop offset=".55" stop-color="#1a1b26" stop-opacity=".85"/><stop offset="1" stop-color="#1a1b26" stop-opacity="0"/></linearGradient>
@@ -978,7 +978,7 @@
 <rect x=".5" y=".5" width="1199" height="249" rx="14" fill="none" stroke="#2f334d"/>
 <g font-family="'JetBrains Mono','SFMono-Regular',Consolas,'DejaVu Sans Mono',monospace">
   <text class="rise" style="animation-delay:.1s" x="64" y="70" font-size="16"><tspan fill="#9ece6a">l-gonzo@github</tspan><tspan fill="#8b93b8">:</tspan><tspan fill="#7aa2f7">~</tspan><tspan fill="#8b93b8">$ whoami</tspan></text>
-  <text class="rise" style="animation-delay:.35s" x="62" y="126" font-size="46" font-weight="700" fill="#c0caf5">Luis Gonzalo Méndez</text>
+  <text class="rise" style="animation-delay:.35s" x="62" y="126" font-size="46" font-weight="700" fill="#c0caf5">Gonzalo Méndez</text>
   <text class="rise" style="animation-delay:.6s" x="64" y="176" font-size="26" fill="#73daca">&gt;</text>
 
   <clipPath id="r0"><rect x="96" y="150" height="36" width="0"><animate attributeName="width" dur="8.42s" begin="1s" repeatCount="indefinite" calcMode="discrete" keyTimes="0.00000;0.00653;0.01306;0.01960;0.02613;0.03266;0.03919;0.04572;0.05226;0.05879;0.06532;0.07185;0.07838;0.08492;0.09145;0.09798;0.10451;0.41627;0.41924;0.42221;0.42518;0.42815;0.43112;0.43409;0.43705;0.44002;0.44299;0.44596;0.44893;0.45190;0.45487;0.45784;0.46081;0.51425;0.52078;0.52732;0.53385;0.54038;0.54691;0.55344;0.55998;0.56651;0.57304;0.57957;0.58610;0.59264;0.59917;0.91093;0.91390;0.91686;0.91983;0.92280;0.92577;0.92874;0.93171;0.93468;0.93765;0.94062;0.94359;0.94656;1" values="0.0;15.6;31.2;46.8;62.4;78.0;93.6;109.2;124.8;140.4;156.0;171.6;187.2;202.8;218.4;234.0;249.6;234.0;218.4;202.8;187.2;171.6;156.0;140.4;124.8;109.2;93.6;78.0;62.4;46.8;31.2;15.6;0.0;0.0;0.0;0.0;0.0;0.0;0.0;0.0;0.0;0.0;0.0;0.0;0.0;0.0;0.0;0.0;0.0;0.0;0.0;0.0;0.0;0.0;0.0;0.0;0.0;0.0;0.0;0.0;0.0"/></rect></clipPath>
