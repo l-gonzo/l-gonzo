@@ -20,6 +20,6 @@
 <rect class="fade" x="114" y="14" width="3" height="40" rx="1.5" fill="#7aa2f7"/>
 <text x="128" y="36" clip-path="url(#c3_0)" xml:space="preserve" textLength="144.0" lengthAdjust="spacing"><tspan fill="#c0caf5">Gonzalo</tspan><tspan fill="#7dcfff">.</tspan><tspan fill="#7aa2f7">stack</tspan><tspan fill="#7dcfff">(</tspan><tspan fill="#7dcfff">)</tspan></text>
 <text class="fade" style="animation-delay:1.65s" x="102" y="102" text-anchor="end" fill="#f7768e">Out[3]:</text>
-<text class="ln" style="animation-delay:1.65s" x="128" y="102" xml:space="preserve"><tspan fill="#bb9af7">&lt;Stack groups=4 tools=16&gt;</tspan><tspan fill="#8b93b8">   # rendered below ↓</tspan></text>
+<text class="ln" style="animation-delay:1.65s" x="128" y="102" xml:space="preserve"><tspan fill="#bb9af7">&lt;Stack groups=4 tools=17&gt;</tspan><tspan fill="#8b93b8">   # rendered below ↓</tspan></text>
 </g>
 </svg>

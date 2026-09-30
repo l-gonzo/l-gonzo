@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="assets/header.svg" width="100%" alt="Luis Gonzalo Méndez — Artificial Intelligence / Machine Learning Engineer · Web Developer"/>
+  <img src="assets/header.svg" width="100%" alt="Luis Gonzalo Méndez — AI / ML Engineer · Web Developer"/>
 </div>
 
 <br/>
@@ -14,8 +14,8 @@
 <table>
   <tr>
     <td><b>Machine Learning</b></td>
-    <td><img src="https://skillicons.dev/icons?i=py,tensorflow&theme=dark" height="40" alt="Python · TensorFlow · Jupyter"/></td>
-    <td><sub>Python · TensorFlow · Jupyter</sub></td>
+    <td><img src="https://skillicons.dev/icons?i=py,tensorflow,pytorch&theme=dark" height="40" alt="Python · TensorFlow · PyTorch · Jupyter"/></td>
+    <td><sub>Python · TensorFlow · PyTorch · Jupyter</sub></td>
   </tr>
   <tr>
     <td><b>Web</b></td>

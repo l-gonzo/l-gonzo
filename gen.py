@@ -21,7 +21,7 @@ NAME = "Luis Gonzalo Méndez"
 GITHUB_USER = "l-gonzo"
 
 # Puestos que se escriben/borran en el header (en ciclo)
-ROLES = ["Artificial Intelligence / Machine Learning Engineer", "Web Developer"]
+ROLES = ["AI / ML Engineer", "Web Developer"]
 
 # In [1]  Luis.summary()   -> (clave, valor); clave "" = continúa la línea anterior
 SUMMARY = [
@@ -42,7 +42,7 @@ FOCUS = [
 # In [3]  Luis.stack()  -> tabla de íconos en el README.
 # (grupo, ids de https://skillicons.dev, texto que se muestra)
 STACK = [
-    ("Machine Learning", ["py", "tensorflow"], "Python · TensorFlow · Jupyter"),
+    ("Machine Learning", ["py", "tensorflow", "pytorch"], "Python · TensorFlow · PyTorch · Jupyter"),
     ("Web", ["ts", "js", "react", "nodejs"], "TypeScript · JavaScript · React · Node.js"),
     ("Apps", ["cs", "dart", "flutter"], "C# · Dart · Flutter"),
     ("Data & Tools", ["mongodb", "mysql", "git", "github", "linux", "windows"],
