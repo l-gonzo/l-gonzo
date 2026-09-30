@@ -30,6 +30,12 @@
   @keyframes bld { 0% { opacity:0; transform: scaleX(0); } 8% { opacity:1; transform: scaleX(1); } 80% { opacity:1; transform: scaleX(1); } 90%,100% { opacity:0; transform: scaleX(1); } }
   .tag { animation: tag 1.6s ease-in-out infinite; }
   @keyframes tag { 0%,100% { opacity:.35; } 50% { opacity:1; } }
+  .bar { transform-box: fill-box; transform-origin: bottom; transform: scaleY(0); animation: bar 7s cubic-bezier(.2,.7,.2,1) infinite; }
+  @keyframes bar { 0% { transform: scaleY(0); opacity:1; } 12%,85% { transform: scaleY(1); opacity:1; } 95%,100% { transform: scaleY(1); opacity:0; } }
+  .gauss { stroke-dasharray:1; stroke-dashoffset:1; animation: gauss 7s ease-in-out 1.9s infinite; }
+  @keyframes gauss { 0% { stroke-dashoffset:1; opacity:1; } 18%,70% { stroke-dashoffset:0; opacity:1; } 80%,100% { stroke-dashoffset:0; opacity:0; } }
+  .mu { opacity:0; animation: mu 7s ease-out 3.2s infinite; }
+  @keyframes mu { 0% { opacity:0; } 6%,55% { opacity:1; } 65%,100% { opacity:0; } }
   .minpulse { transform-box: fill-box; transform-origin:center; animation: minpulse 2s ease-out infinite; }
   @keyframes minpulse { from { transform: scale(.6); opacity:1; } to { transform: scale(2.6); opacity:0; } }
   @media (prefers-reduced-motion: reduce) { *{ animation:none !important; opacity:1 !important; } }

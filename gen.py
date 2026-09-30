@@ -427,8 +427,41 @@ def viz_web(ox, oy, w, h, rng):
     s.append(f'<text class="tag" x="{ox + w - 6:.1f}" y="{oy + h - 5:.1f}" text-anchor="end" fill="{ORANGE}" font-size="11" font-weight="700">&lt;/&gt;</text>')
     return s
 
+def viz_stats(ox, oy, w, h, rng):
+    """histogram whose bars grow, then a normal curve is drawn over it (mu and ±sigma)"""
+    s = []
+    bins = 13
+    mu, sigma = 0.5, 0.17
+    base = oy + h - 8                      # x axis
+    top = oy + 10                          # highest point of the curve
+    bw = w / bins
+    pdf = lambda u: math.exp(-0.5 * ((u - mu) / sigma) ** 2)
+    # axis
+    s.append(f'<path d="M{ox:.1f} {base:.1f}H{ox + w:.1f}" stroke="{MUTED}" stroke-width="1"/>')
+    # bars (empirical histogram = pdf + noise)
+    for i in range(bins):
+        u = (i + 0.5) / bins
+        hh = max(3, (base - top) * pdf(u) * rng.uniform(0.78, 1.08))
+        x = ox + i * bw
+        d = 1.0 + abs(i - bins // 2) * 0.07   # grows from the center outwards
+        s.append(f'<rect class="bar" style="animation-delay:{d:.2f}s" x="{x + 1:.1f}" y="{base - hh:.1f}" width="{bw - 2:.1f}" height="{hh:.1f}" rx="1.5" fill="{BLUE}" fill-opacity=".55"/>')
+    # normal curve
+    pts = []
+    for k in range(61):
+        u = k / 60
+        pts.append(f"{ox + u * w:.1f},{base - (base - top) * pdf(u):.1f}")
+    s.append(f'<path class="gauss" pathLength="1" d="M{" L".join(pts)}" fill="none" stroke="{ORANGE}" stroke-width="2.2" stroke-linecap="round"/>')
+    # mu and ±sigma markers
+    mx = ox + mu * w
+    s.append(f'<g class="mu"><path d="M{mx:.1f} {top - 4:.1f}V{base:.1f}" stroke="{TEAL}" stroke-width="1.4" stroke-dasharray="3 3"/>'
+             f'<text x="{mx + 4:.1f}" y="{top + 4:.1f}" fill="{TEAL}" font-size="11" font-weight="700">μ</text></g>')
+    for sgn, lab in ((-1, "-σ"), (1, "+σ")):
+        sx = ox + (mu + sgn * sigma) * w
+        s.append(f'<g class="mu"><path d="M{sx:.1f} {base - 4:.1f}V{base + 4:.1f}" stroke="{PURPLE}" stroke-width="1.6"/>'
+                 f'<text x="{sx:.1f}" y="{base + 13:.1f}" text-anchor="middle" fill="{PURPLE}" font-size="10">{lab}</text></g>')
+    return s
 
-VIZ = {"ml": viz_ml, "dl": viz_dl, "cv": viz_cv, "opt": viz_opt, "web": viz_web}
+VIZ = {"ml": viz_ml, "dl": viz_dl, "cv": viz_cv, "opt": viz_opt, "web": viz_web, "stats": viz_stats}
 
 
 def cell_focus():
@@ -487,6 +520,12 @@ def cell_focus():
   @keyframes bld {{ 0% {{ opacity:0; transform: scaleX(0); }} 8% {{ opacity:1; transform: scaleX(1); }} 80% {{ opacity:1; transform: scaleX(1); }} 90%,100% {{ opacity:0; transform: scaleX(1); }} }}
   .tag {{ animation: tag 1.6s ease-in-out infinite; }}
   @keyframes tag {{ 0%,100% {{ opacity:.35; }} 50% {{ opacity:1; }} }}
+  .bar {{ transform-box: fill-box; transform-origin: bottom; transform: scaleY(0); animation: bar 7s cubic-bezier(.2,.7,.2,1) infinite; }}
+  @keyframes bar {{ 0% {{ transform: scaleY(0); opacity:1; }} 12%,85% {{ transform: scaleY(1); opacity:1; }} 95%,100% {{ transform: scaleY(1); opacity:0; }} }}
+  .gauss {{ stroke-dasharray:1; stroke-dashoffset:1; animation: gauss 7s ease-in-out 1.9s infinite; }}
+  @keyframes gauss {{ 0% {{ stroke-dashoffset:1; opacity:1; }} 18%,70% {{ stroke-dashoffset:0; opacity:1; }} 80%,100% {{ stroke-dashoffset:0; opacity:0; }} }}
+  .mu {{ opacity:0; animation: mu 7s ease-out 3.2s infinite; }}
+  @keyframes mu {{ 0% {{ opacity:0; }} 6%,55% {{ opacity:1; }} 65%,100% {{ opacity:0; }} }}
   .minpulse {{ transform-box: fill-box; transform-origin:center; animation: minpulse 2s ease-out infinite; }}
   @keyframes minpulse {{ from {{ transform: scale(.6); opacity:1; }} to {{ transform: scale(2.6); opacity:0; }} }}
 """
