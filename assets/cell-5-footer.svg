@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 104" width="1000" height="104" role="img" aria-label="Empty notebook cell">
+<title>Luis Gonzalo Méndez — In [ ]</title>
+<style>
+  .fade { opacity:0; animation: fade .45s ease-out forwards; }
+  .ln   { opacity:0; animation: ln .45s ease-out forwards; }
+  .up   { opacity:0; animation: up .6s cubic-bezier(.2,.7,.2,1) forwards; }
+  .cur  { animation: blink 1s steps(1) infinite; }
+  @keyframes fade { to { opacity:1; } }
+  @keyframes ln   { from { opacity:0; transform: translateX(-6px); } to { opacity:1; transform:none; } }
+  @keyframes up   { from { opacity:0; transform: translateY(14px); } to { opacity:1; transform:none; } }
+  @keyframes blink{ 50% { opacity:0; } }
+  @media (prefers-reduced-motion: reduce) { *{ animation:none !important; opacity:1 !important; } }
+</style>
+<rect x=".5" y=".5" width="999" height="103" rx="12" fill="#1a1b26" stroke="#2f334d"/>
+<g font-family="'JetBrains Mono','SFMono-Regular',Consolas,'DejaVu Sans Mono',monospace" font-size="16">
+  <text x="102" y="40" text-anchor="end" fill="#7aa2f7">In [ ]:</text>
+  <rect x="114" y="18" width="862" height="40" rx="7" fill="#1f2335" stroke="#2f334d"/>
+  <rect x="114" y="18" width="3" height="40" rx="1.5" fill="#9ece6a"/>
+  <rect class="cur" x="128" y="25" width="10" height="20" fill="#73daca"/>
+</g>
+<path d="M.5 74H999.5" stroke="#2f334d"/>
+<g font-family="'JetBrains Mono','SFMono-Regular',Consolas,'DejaVu Sans Mono',monospace" font-size="12" fill="#8b93b8">
+  <text x="20" y="93"><tspan fill="#9ece6a">●</tspan> Python 3 (ipykernel) | Idle</text>
+  <text x="500.0" y="93" text-anchor="middle">Mode: Edit</text>
+  <text x="980" y="93" text-anchor="end">l-gonzo · profile.ipynb</text>
+</g>
+</svg>

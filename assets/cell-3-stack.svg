@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 128" width="1000" height="128" role="img" aria-label="Notebook cell 3">
+<title>Luis Gonzalo Méndez — In [3]</title>
+<defs><clipPath id="c3_0"><rect x="126" y="17" height="26" width="0"><animate attributeName="width" begin="0.50s" dur="0.75s" values="0.0;9.6;19.2;28.8;38.4;48.0;57.6;67.2;76.8;86.4;96.0;105.6;115.2;124.8;134.4;144.0" calcMode="discrete" fill="freeze"/></rect></clipPath></defs>
+<style>
+  .fade { opacity:0; animation: fade .45s ease-out forwards; }
+  .ln   { opacity:0; animation: ln .45s ease-out forwards; }
+  .up   { opacity:0; animation: up .6s cubic-bezier(.2,.7,.2,1) forwards; }
+  .cur  { animation: blink 1s steps(1) infinite; }
+  @keyframes fade { to { opacity:1; } }
+  @keyframes ln   { from { opacity:0; transform: translateX(-6px); } to { opacity:1; transform:none; } }
+  @keyframes up   { from { opacity:0; transform: translateY(14px); } to { opacity:1; transform:none; } }
+  @keyframes blink{ 50% { opacity:0; } }
+  @media (prefers-reduced-motion: reduce) { *{ animation:none !important; opacity:1 !important; } }
+</style>
+<rect x=".5" y=".5" width="999" height="127" rx="12" fill="#1a1b26" stroke="#2f334d"/>
+
+<g font-family="'JetBrains Mono','SFMono-Regular',Consolas,'DejaVu Sans Mono',monospace" font-size="16">
+<text class="fade" x="102" y="36" text-anchor="end" fill="#7aa2f7">In [3]:</text>
+<rect class="fade" x="114" y="14" width="862" height="40" rx="7" fill="#1f2335" stroke="#2f334d"/>
+<rect class="fade" x="114" y="14" width="3" height="40" rx="1.5" fill="#7aa2f7"/>
+<text x="128" y="36" clip-path="url(#c3_0)" xml:space="preserve" textLength="144.0" lengthAdjust="spacing"><tspan fill="#c0caf5">Gonzalo</tspan><tspan fill="#7dcfff">.</tspan><tspan fill="#7aa2f7">stack</tspan><tspan fill="#7dcfff">(</tspan><tspan fill="#7dcfff">)</tspan></text>
+<text class="fade" style="animation-delay:1.65s" x="102" y="102" text-anchor="end" fill="#f7768e">Out[3]:</text>
+<text class="ln" style="animation-delay:1.65s" x="128" y="102" xml:space="preserve"><tspan fill="#bb9af7">&lt;Stack groups=4 tools=16&gt;</tspan><tspan fill="#8b93b8">   # rendered below ↓</tspan></text>
+</g>
+</svg>
