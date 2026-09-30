@@ -60,7 +60,7 @@ STACK = [
 # (texto, color hex sin #, logo de https://simpleicons.org o "" = sobre de correo, enlace)
 # Los badges se generan como SVG locales en assets/badges/ (sin shields.io).
 CONTACT = [
-    ("LinkedIn", "7aa2f7", "linkedin", "https://www.linkedin.com/in/thegonzo/"),
+    ("LinkedIn", "7aa2f7", "linkedin", "https://www.linkedin.com/in/l-gonzalo/"),
     ("Email", "73daca", "", "mailto:go.mendez@outlook.com"),
     ("GitHub", "bb9af7", "github", "https://github.com/l-gonzo"),
 ]
