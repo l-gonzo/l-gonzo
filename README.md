@@ -6,7 +6,7 @@
 
 <img src="assets/cell-1-summary.svg" width="100%" alt="In [1]: Gonzalo.summary() — role: AI / Machine Learning Engineer · Web Developer; degree: B.Eng. Computer Systems; M.Sc. Computer Science (in progress)"/>
 
-<img src="assets/cell-2-focus.svg" width="100%" alt="In [2]: Gonzalo.focus_areas() — Machine Learning, Deep Learning, Computer Vision, Optimization &amp; Heuristics, Web Development"/>
+<img src="assets/cell-2-focus.svg" width="100%" alt="In [2]: Gonzalo.focus_areas() — Machine Learning, Deep Learning, Computer Vision, Optimization &amp; Heuristics, Web Development, Probability &amp; Statistics"/>
 
 <img src="assets/cell-3-stack.svg" width="100%" alt="In [3]: Gonzalo.stack()"/>
 

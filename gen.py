@@ -40,7 +40,7 @@ FOCUS = [
     ("Computer Vision", "cv"),
     ("Optimization & Heuristics", "opt"),
     ("Web Development", "web"),
-    #("Probability & Statistics", "stats"),
+    ("Probability & Statistics", "stats"),
 ]
 
 # In [3]  Gonzalo.stack()  -> tabla de íconos en el README.
