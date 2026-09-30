@@ -27,7 +27,7 @@ ROLES = ["AI / ML Engineer", "Web Developer"]
 
 # In [1]  Gonzalo.summary()   -> (clave, valor); clave "" = continúa la línea anterior
 SUMMARY = [
-    ("role", "AI / Machine Learning Engineer · Web Developer"),
+    ("role", "AI / ML Engineer · Web Developer"),
     ("degree", "B.Eng. Computer Systems"),
     ("", "M.Sc. Computer Science (in progress)"),
 ]
@@ -120,7 +120,7 @@ def header():
         return ";".join(v + [v[-1]])
 
     s = [f'''<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 {W} {H}" width="{W}" height="{H}" role="img" aria-label="Gonzalo Méndez — AI / Machine Learning Engineer · Web Developer">
-<title>Gonzalo Méndez — AI / Machine Learning Engineer · Web Developer</title>
+<title>Gonzalo Méndez — AI / ML Engineer · Web Developer</title>
 <defs>
   <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="{BG2}"/><stop offset="1" stop-color="{BG}"/></linearGradient>
   <linearGradient id="fadeR" x1="0" x2="1"><stop offset="0" stop-color="{BG}" stop-opacity="1"/><stop offset=".55" stop-color="{BG}" stop-opacity=".85"/><stop offset="1" stop-color="{BG}" stop-opacity="0"/></linearGradient>

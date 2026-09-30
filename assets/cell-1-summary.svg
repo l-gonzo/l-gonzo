@@ -21,7 +21,7 @@
 <text x="128" y="84" clip-path="url(#c1_0)" xml:space="preserve" textLength="259.2" lengthAdjust="spacing"><tspan fill="#bb9af7">from</tspan><tspan fill="#c0caf5"> </tspan><tspan fill="#c0caf5">profile</tspan><tspan fill="#c0caf5"> </tspan><tspan fill="#bb9af7">import</tspan><tspan fill="#c0caf5"> </tspan><tspan fill="#c0caf5">Gonzalo</tspan></text>
 <text x="128" y="110" clip-path="url(#c1_1)" xml:space="preserve" textLength="163.2" lengthAdjust="spacing"><tspan fill="#c0caf5">Gonzalo</tspan><tspan fill="#7dcfff">.</tspan><tspan fill="#7aa2f7">summary</tspan><tspan fill="#7dcfff">(</tspan><tspan fill="#7dcfff">)</tspan></text>
 <text class="fade" style="animation-delay:3.25s" x="102" y="176" text-anchor="end" fill="#f7768e">Out[1]:</text>
-<text class="ln" style="animation-delay:3.25s" x="128" y="176" xml:space="preserve"><tspan fill="#7dcfff">role   :</tspan><tspan fill="#c0caf5"> AI / Machine Learning Engineer · Web Developer</tspan></text>
+<text class="ln" style="animation-delay:3.25s" x="128" y="176" xml:space="preserve"><tspan fill="#7dcfff">role   :</tspan><tspan fill="#c0caf5"> AI / ML Engineer · Web Developer</tspan></text>
 <text class="ln" style="animation-delay:3.40s" x="128" y="202" xml:space="preserve"><tspan fill="#7dcfff">degree :</tspan><tspan fill="#c0caf5"> B.Eng. Computer Systems</tspan></text>
 <text class="ln" style="animation-delay:3.55s" x="128" y="228" xml:space="preserve"><tspan fill="#7dcfff">        </tspan><tspan fill="#c0caf5"> M.Sc. Computer Science (in progress)</tspan></text>
 </g>
