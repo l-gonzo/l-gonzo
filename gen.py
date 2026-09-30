@@ -37,10 +37,10 @@ SUMMARY = [
 FOCUS = [
     ("Machine Learning", "ml"),
     ("Deep Learning", "dl"),
-    ("Computer Vision", "cv"),
+    # ("Computer Vision", "cv"),
     ("Optimization & Heuristics", "opt"),
     ("Web Development", "web"),
-    ("Probability & Statistics", "stats"),
+    # ("Probability & Statistics", "stats"),
 ]
 
 # In [3]  Gonzalo.stack()  -> tabla de íconos en el README.
