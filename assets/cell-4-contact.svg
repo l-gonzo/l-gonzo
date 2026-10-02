@@ -20,6 +20,6 @@
 <rect class="fade" x="114" y="14" width="3" height="40" rx="1.5" fill="#7aa2f7"/>
 <text x="128" y="36" clip-path="url(#c4_0)" xml:space="preserve" textLength="163.2" lengthAdjust="spacing"><tspan fill="#c0caf5">Gonzalo</tspan><tspan fill="#7dcfff">.</tspan><tspan fill="#7aa2f7">contact</tspan><tspan fill="#7dcfff">(</tspan><tspan fill="#7dcfff">)</tspan></text>
 <text class="fade" style="animation-delay:1.75s" x="102" y="102" text-anchor="end" fill="#f7768e">Out[4]:</text>
-<text class="ln" style="animation-delay:1.75s" x="128" y="102" xml:space="preserve"><tspan fill="#bb9af7">&lt;Contact links=3&gt;</tspan><tspan fill="#8b93b8">   # click a badge below ↓</tspan></text>
+<text class="ln" style="animation-delay:1.75s" x="128" y="102" xml:space="preserve"><tspan fill="#bb9af7">&lt;Contact links=2&gt;</tspan><tspan fill="#8b93b8">   # click a badge below ↓</tspan></text>
 </g>
 </svg>

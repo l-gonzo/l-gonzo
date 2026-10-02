@@ -61,7 +61,6 @@ STACK = [
 # Los badges se generan como SVG locales en assets/badges/ (sin shields.io).
 CONTACT = [
     ("LinkedIn", "7aa2f7", "linkedin", "https://www.linkedin.com/in/l-gonzalo/"),
-    ("Email", "73daca", "", "mailto:go.mendez@outlook.com"),
     ("GitHub", "bb9af7", "github", "https://github.com/l-gonzo"),
 ]
 
@@ -695,6 +694,7 @@ def readme():
   </tr>''')
     badges = []
     for text, color, logo, link in CONTACT:
+        print(text)
         badges.append(f'  <a href="{link}"><img src="{badge(text, color, logo)}" height="30" alt="{esc(text)}"/></a>')
     summary_alt = "; ".join(f"{k}: {v}" if k else v for k, v in SUMMARY)
     md = f'''<div align="center">
