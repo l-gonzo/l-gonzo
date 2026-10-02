@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 256" width="1000" height="256" role="img" aria-label="Notebook cell 1">
 <title>Gonzalo Méndez — In [1]</title>
-<defs><clipPath id="c1_0"><rect x="126" y="65" height="26" width="0"><animate attributeName="width" begin="0.50s" dur="1.35s" values="0.0;9.6;19.2;28.8;38.4;48.0;57.6;67.2;76.8;86.4;96.0;105.6;115.2;124.8;134.4;144.0;153.6;163.2;172.8;182.4;192.0;201.6;211.2;220.8;230.4;240.0;249.6;259.2" calcMode="discrete" fill="freeze"/></rect></clipPath><clipPath id="c1_1"><rect x="126" y="91" height="26" width="0"><animate attributeName="width" begin="2.00s" dur="0.85s" values="0.0;9.6;19.2;28.8;38.4;48.0;57.6;67.2;76.8;86.4;96.0;105.6;115.2;124.8;134.4;144.0;153.6;163.2" calcMode="discrete" fill="freeze"/></rect></clipPath></defs>
+<defs><clipPath id="c1_0"><rect x="126" y="65" height="26" width="0"><animate attributeName="width" begin="0.50s" dur="1.40s" values="0.0;9.6;19.2;28.8;38.4;48.0;57.6;67.2;76.8;86.4;96.0;105.6;115.2;124.8;134.4;144.0;153.6;163.2;172.8;182.4;192.0;201.6;211.2;220.8;230.4;240.0;249.6;259.2;268.8" calcMode="discrete" fill="freeze"/></rect></clipPath><clipPath id="c1_1"><rect x="126" y="91" height="26" width="0"><animate attributeName="width" begin="2.05s" dur="0.85s" values="0.0;9.6;19.2;28.8;38.4;48.0;57.6;67.2;76.8;86.4;96.0;105.6;115.2;124.8;134.4;144.0;153.6;163.2" calcMode="discrete" fill="freeze"/></rect></clipPath></defs>
 <style>
   .fade { opacity:0; animation: fade .45s ease-out forwards; }
   .ln   { opacity:0; animation: ln .45s ease-out forwards; }
@@ -18,11 +18,11 @@
 <text class="fade" x="102" y="84" text-anchor="end" fill="#7aa2f7">In [1]:</text>
 <rect class="fade" x="114" y="62" width="862" height="66" rx="7" fill="#1f2335" stroke="#2f334d"/>
 <rect class="fade" x="114" y="62" width="3" height="66" rx="1.5" fill="#7aa2f7"/>
-<text x="128" y="84" clip-path="url(#c1_0)" xml:space="preserve" textLength="259.2" lengthAdjust="spacing"><tspan fill="#bb9af7">from</tspan><tspan fill="#c0caf5"> </tspan><tspan fill="#c0caf5">profile</tspan><tspan fill="#c0caf5"> </tspan><tspan fill="#bb9af7">import</tspan><tspan fill="#c0caf5"> </tspan><tspan fill="#c0caf5">Gonzalo</tspan></text>
+<text x="128" y="84" clip-path="url(#c1_0)" xml:space="preserve" textLength="268.8" lengthAdjust="spacing"><tspan fill="#bb9af7">from</tspan><tspan fill="#c0caf5"> </tspan><tspan fill="#c0caf5">profile</tspan><tspan fill="#c0caf5"> </tspan><tspan fill="#bb9af7">import</tspan><tspan fill="#c0caf5"> </tspan><tspan fill="#c0caf5">Gonzalo</tspan><tspan fill="#c0caf5"> </tspan></text>
 <text x="128" y="110" clip-path="url(#c1_1)" xml:space="preserve" textLength="163.2" lengthAdjust="spacing"><tspan fill="#c0caf5">Gonzalo</tspan><tspan fill="#7dcfff">.</tspan><tspan fill="#7aa2f7">summary</tspan><tspan fill="#7dcfff">(</tspan><tspan fill="#7dcfff">)</tspan></text>
-<text class="fade" style="animation-delay:3.25s" x="102" y="176" text-anchor="end" fill="#f7768e">Out[1]:</text>
-<text class="ln" style="animation-delay:3.25s" x="128" y="176" xml:space="preserve"><tspan fill="#7dcfff">role   :</tspan><tspan fill="#c0caf5"> AI / ML Engineer · Web Developer</tspan></text>
-<text class="ln" style="animation-delay:3.40s" x="128" y="202" xml:space="preserve"><tspan fill="#7dcfff">degree :</tspan><tspan fill="#c0caf5"> B.Eng. Computer Systems</tspan></text>
-<text class="ln" style="animation-delay:3.55s" x="128" y="228" xml:space="preserve"><tspan fill="#7dcfff">        </tspan><tspan fill="#c0caf5"> M.Sc. Computer Science (in progress)</tspan></text>
+<text class="fade" style="animation-delay:3.30s" x="102" y="176" text-anchor="end" fill="#f7768e">Out[1]:</text>
+<text class="ln" style="animation-delay:3.30s" x="128" y="176" xml:space="preserve"><tspan fill="#7dcfff">role   :</tspan><tspan fill="#c0caf5"> AI / ML Engineer · Web Developer</tspan></text>
+<text class="ln" style="animation-delay:3.45s" x="128" y="202" xml:space="preserve"><tspan fill="#7dcfff">degree :</tspan><tspan fill="#c0caf5"> B.Eng. Computer Systems</tspan></text>
+<text class="ln" style="animation-delay:3.60s" x="128" y="228" xml:space="preserve"><tspan fill="#7dcfff">        </tspan><tspan fill="#c0caf5"> M.Sc. Computer Science (in progress)</tspan></text>
 </g>
 </svg>

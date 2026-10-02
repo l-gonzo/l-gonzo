@@ -300,7 +300,7 @@ class Cell:
 
 # ---- cell 1: summary ------------------------------------------------
 def cell_summary():
-    c = Cell(1, ["from profile import Gonzalo", "Gonzalo.summary()"], toolbar=True)
+    c = Cell(1, ["from profile import Gonzalo ", "Gonzalo.summary()"], toolbar=True)
     c.input()
     c.kv(SUMMARY)
     c.render("cell-1-summary.svg", extra_h=6)
